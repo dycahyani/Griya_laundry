@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".editMember"
+    android:background="@drawable/gradient"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="165dp"
+            android:background="@drawable/bgl"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="match_parent"
+        android:layout_marginTop="120dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:fontFamily="@font/delight"
+        android:text="Edit Profile Member"
+        android:textColor="@color/biruTua"
+        android:textSize="20sp"
+        />
+
+    <ScrollView
+        android:id="@+id/svEntry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/label">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view"
+                android:layout_width="380dp"
+                android:layout_height="564dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="15dp"
+                app:cardCornerRadius="20dp">
+
+                <!--nama-->
+                <EditText
+                    android:id="@+id/Name2"
+                    android:layout_width="349dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="25dp"
+                    android:ems="12"
+                    android:hint="Nama Lengkap"
+                    android:inputType="textPersonName" />
+
+                <!--no telp-->
+                <EditText
+                    android:id="@+id/Phone2"
+                    android:layout_width="348dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="65dp"
+                    android:ems="12"
+                    android:hint="0821********"
+                    android:inputType="phone" />
+
+                <EditText
+                    android:id="@+id/Email2"
+                    android:layout_width="348dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Phone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="105dp"
+                    android:ems="12"
+                    android:hint="Email@mail.com"
+                    android:inputType="textEmailAddress" />
+
+                <EditText
+                    android:id="@+id/Add2"
+                    android:layout_width="348dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Email"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="145dp"
+                    android:layout_marginBottom="10dp"
+                    android:ems="12"
+                    android:hint="Alamat"
+                    android:inputType="text" />
+
+                <TextView
+                    android:id="@+id/jk2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Add"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="185dp"
+                    android:text="Jenis Kelamin"
+                    android:textSize="17sp" />
+
+                <RadioGroup
+                    android:id="@+id/rg2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/judul2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="215dp"
+                    app:buttonTint="@color/biru"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/biru"
+                        android:text="Wanita"
+
+                        />
+
+                    <RadioButton
+                        android:id="@+id/rb22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/biru"
+                        android:text="Pria"
+
+                        />
+                </RadioGroup>
+
+                <!--seekbar umur-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rg"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="263dp"
+                    android:orientation="horizontal"
+                    android:text="Usia"
+                    android:textSize="17sp" />
+
+                <SeekBar
+                    android:id="@+id/sb2"
+                    android:layout_width="348dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/judul3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="288dp"
+                    android:max="70"
+                    android:min="17"
+                    android:thumbTint="@color/biru" />
+
+                <TextView
+                    android:id="@+id/usia2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sb"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="311dp"
+                    android:text="17 Tahun"
+                    android:textSize="15sp" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="360dp">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/cb2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:text="Apakah Data yang anda masukan Valid? " />
+                    </TableRow>
+                </TableLayout>
+
+                <Button
+                    android:id="@+id/update_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/usia"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:layout_marginLeft="125dp"
+                    android:layout_marginTop="450dp"
+                    android:backgroundTint="@color/biru"
+                    android:onClick="update"
+                    android:text="Update">
+
+                </Button>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
